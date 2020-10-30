@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCalcularNotasLBone.MainPage">
+
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          HorizontalOptions="CenterAndExpand"
+          >
+            <Label
+                x:Name="lblTitulo"
+               FontSize="18"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Nota Seg 1: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="0" Grid.Column="0" x:Name="txtNota1" HorizontalTextAlignment="Center" FontSize="Large" Keyboard="Numeric"></Entry>
+        <Label Grid.Row="1" Grid.Column="0" Text="Examen1: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="1" Grid.Column="0" x:Name="txtExamen1" HorizontalTextAlignment="Center" FontSize="Large" Keyboard="Numeric"></Entry>
+        <Label Grid.Row="2" Grid.Column="0" Text="Parcial 1: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="2" Grid.Column="0" x:Name="txtParcial1" HorizontalTextAlignment="Center" FontSize="Large" IsReadOnly="True" Text="0"></Entry>
+        <StackLayout Grid.Row="3" Grid.Column="0">
+            <Button 
+                Text="Calcular Parcial 1"
+                FontSize="Large"
+                x:Name="btn1"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="btn1_Clicked"/>
+        </StackLayout>
+
+
+        <Label Grid.Row="0" Grid.Column="1" Text="Nota Seg 2: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNota2" HorizontalTextAlignment="Center" FontSize="Large" Keyboard="Numeric"></Entry>
+        <Label Grid.Row="1" Grid.Column="1" Text="Examen2: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="1" Grid.Column="1" x:Name="txtExamen2" HorizontalTextAlignment="Center" FontSize="Large" Keyboard="Numeric"></Entry>
+        <Label Grid.Row="2" Grid.Column="1" Text="Parcial 2: " HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="2" Grid.Column="1" x:Name="txtParcial2" HorizontalTextAlignment="Center" FontSize="Large" IsReadOnly="True" Text="0"></Entry>
+        <StackLayout Grid.Row="3" Grid.Column="1">
+            <Button 
+                Text="Calcular Parcial 2"
+                FontSize="Large"
+                x:Name="btnParcial2"
+                BackgroundColor="Blue"
+                TextColor="White"
+                Clicked="btnParcial2_Clicked"/>
+        </StackLayout>
+
+
+        <Label Grid.Row="4" Grid.Column="0" Text="Nota Final: " VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="4" Grid.Column="1" x:Name="txtNotaFinal" VerticalTextAlignment="Start" HorizontalTextAlignment="Center" FontSize="Large" Text="0"></Entry>
+
+        <Label Grid.Row="4" Grid.Column="0" Text="Estado: " VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontSize="Large"/>
+        <Entry Grid.Row="4" Grid.Column="1" x:Name="txtEstado" VerticalTextAlignment="End" HorizontalTextAlignment="Center" FontSize="Large" Text=""></Entry>
+
+    </Grid>
+
+</ContentPage>
