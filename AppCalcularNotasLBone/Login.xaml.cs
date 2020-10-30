@@ -19,8 +19,11 @@ namespace AppCalcularNotasLBone
 
         private async void btnIngresar_Clicked(object sender, EventArgs e)
         {
+            //Obtener por pantalla datos ingresados por usuario
             String user = txtUsuario.Text;
             String pass = txtClave.Text;
+
+            //validar los datos
             if(user == "estudiante2020" && pass == "uisrael2020")
             {
                 await Navigation.PushAsync(new MainPage(user));
